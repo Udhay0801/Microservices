@@ -50,5 +50,10 @@ public class EmployeeEntity {
 	public void setEmpSal(Double empSal) {
 		this.empSal = empSal;
 	}
+	@Override
+	public String toString() {
+		return "EmployeeEntity [empId=" + empId + ", empName=" + empName + ", empDesig=" + empDesig
+				+ ", employeeAddress=" + employeeAddress + ", empSal=" + empSal + ", buId=" + buId + "]";
+	}
 	
 }

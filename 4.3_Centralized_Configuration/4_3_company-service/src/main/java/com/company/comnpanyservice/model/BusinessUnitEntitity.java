@@ -26,6 +26,8 @@ public class BusinessUnitEntitity {
 	public void setBuHead(String buHead) {
 		this.buHead = buHead;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "BusinessUnitEntitity [buId=" + buId + ", buName=" + buName + ", buHead=" + buHead + "]";
+	}
 }

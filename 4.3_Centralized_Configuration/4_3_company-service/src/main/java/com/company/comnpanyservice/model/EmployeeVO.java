@@ -66,5 +66,11 @@ public class EmployeeVO {
 	public void setBuHead(String buHead) {
 		this.buHead = buHead;
 	}
+	@Override
+	public String toString() {
+		return "EmployeeVO [empId=" + empId + ", empName=" + empName + ", empDesig=" + empDesig + ", employeeAddress="
+				+ employeeAddress + ", empSal=" + empSal + ", buId=" + buId + ", buName=" + buName + ", buHead="
+				+ buHead + "]";
+	}
 	
 }

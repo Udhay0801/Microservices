@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
@@ -19,15 +21,18 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 @Service
 public class CompanyService {
 
+	private final Logger log = LoggerFactory.getLogger(this.getClass());
+	
 	@Autowired
 	public RestTemplate restTemplate;
 	
 	public List<EmployeeVO> getConsolidatedEmpDetails(List<EmployeeEntity> empList, List<BusinessUnitEntitity> buList)
 	{
+		log.info("Inside "+this.getClass().getSimpleName()+" getConsolidatedEmpDetails() method");
 		//List<EmployeeEntity> empList = getAllEmployees();
 		
 		//List<BusinessUnitEntitity> buList = getAllBUDetails();
-
+		log.info("Consolidated Company Details");
 		return empList.stream().map(e -> {
 			EmployeeVO vo = new EmployeeVO();
 			vo.setEmpId(e.getEmpId());
@@ -44,8 +49,9 @@ public class CompanyService {
 					vo.setBuHead(bu.getBuHead());
 				}
 			});
+			log.info(vo.toString());
 			return vo;
-		}).collect(Collectors.toList());		
+		}).collect(Collectors.toList());
 	}
 
 	@HystrixCommand(fallbackMethod = "getFallBackAllBUDetails", 
@@ -57,9 +63,13 @@ public class CompanyService {
 			@HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "10000")
 		})
 	public List<BusinessUnitEntitity> getAllBUDetails() {
+		log.info("Inside "+this.getClass().getSimpleName()+" getAllBUDetails() method");
 	    List<BusinessUnitEntitity> buList = restTemplate.exchange("http://bu-service/bulist", HttpMethod.GET,
 	    		null, new ParameterizedTypeReference<List<BusinessUnitEntitity>>() {
 	    		}, new Object[] {}).getBody();
+	    log.info("BU Details");
+	    buList.forEach(bu -> log.info(bu.toString()));
+	    log.info("End of  "+this.getClass().getSimpleName()+" getAllBUDetails() method");
 	    return buList;
 	}
 
@@ -72,13 +82,19 @@ public class CompanyService {
 			@HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "10000")
 		})
 	public List<EmployeeEntity> getAllEmployees(boolean isExceptionTrigger) {
+		log.info("Inside "+this.getClass().getSimpleName()+" getAllEmployees() method");
 	    List<EmployeeEntity> empList = restTemplate.exchange("http://employee-service/employees/getallemp/{isExceptionTrigger}", HttpMethod.GET, null,
 	    		new ParameterizedTypeReference<List<EmployeeEntity>>() {
 	    		}, isExceptionTrigger).getBody();
+	    log.info("Employee Details");
+	    empList.forEach(emp -> log.info(emp.toString()));
+	    log.info("End of  "+this.getClass().getSimpleName()+" getAllEmployees() method");
 	    return empList;
 	}
 	
 	public List<EmployeeEntity> getFallbackAllEmployees(boolean isExceptionTrigger) {
+		log.info("Invoking Fallback method.....");
+		log.info("Inside "+this.getClass().getSimpleName()+" getFallbackAllEmployees() method");
 	    List<EmployeeEntity> empList = new ArrayList<EmployeeEntity>();
 	    EmployeeEntity e = new EmployeeEntity();
 	    e.setBuId(0);
@@ -91,6 +107,8 @@ public class CompanyService {
 	}
 	
 	public List<BusinessUnitEntitity> getFallBackAllBUDetails() {
+		log.info("Invoking Fallback method.....");
+		log.info("Inside "+this.getClass().getSimpleName()+" getFallBackAllBUDetails() method");
 	    List<BusinessUnitEntitity> buList = new ArrayList<BusinessUnitEntitity>();
 	    BusinessUnitEntitity bu = new BusinessUnitEntitity();
 	    bu.setBuHead("None");
