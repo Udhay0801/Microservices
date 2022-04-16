@@ -1,7 +1,0 @@
-DROP TABLE IF EXISTS `BUSINESS_UNIT`;
-CREATE TABLE `BUSINESS_UNIT` (
-  `bu_id` number(20) NOT NULL AUTO_INCREMENT,
-  `bu_name` varchar2(50) DEFAULT NULL,
-  `bu_head` varchar2(50) DEFAULT NULL,
-  PRIMARY KEY (`bu_id`)
-);
