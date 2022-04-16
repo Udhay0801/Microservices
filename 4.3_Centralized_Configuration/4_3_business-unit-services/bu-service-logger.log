@@ -1,0 +1,790 @@
+2022-04-15 00:00:35.009  INFO [bu-service,,,] 17360 --- [main] c.b.b.BusinessUnitServicesApplication    : The following profiles are active: dev
+2022-04-15 00:00:35.900  INFO [bu-service,,,] 17360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-15 00:00:35.965  INFO [bu-service,,,] 17360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 1 JPA repository interfaces.
+2022-04-15 00:00:36.081  WARN [bu-service,,,] 17360 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-04-15 00:00:36.312  INFO [bu-service,,,] 17360 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d6e36066-1943-308b-930f-cc57fb4c0f48
+2022-04-15 00:00:36.879  INFO [bu-service,,,] 17360 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$1a911a2f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-15 00:00:37.314  INFO [bu-service,,,] 17360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2022-04-15 00:00:37.320  INFO [bu-service,,,] 17360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-15 00:00:37.320  INFO [bu-service,,,] 17360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2022-04-15 00:00:37.448  INFO [bu-service,,,] 17360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-15 00:00:37.448  INFO [bu-service,,,] 17360 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2410 ms
+2022-04-15 00:00:37.607  WARN [bu-service,,,] 17360 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 00:00:37.607  INFO [bu-service,,,] 17360 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 00:00:37.623  INFO [bu-service,,,] 17360 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3a36cd5
+2022-04-15 00:00:37.798  INFO [bu-service,,,] 17360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-15 00:00:38.125  INFO [bu-service,,,] 17360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-15 00:00:38.157  INFO [bu-service,,,] 17360 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../h2db/buserviceDB'
+2022-04-15 00:00:38.955 ERROR [bu-service,,,] 17360 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'traceWebFilter' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceWebServletAutoConfiguration.class]: Unsatisfied dependency expressed through method 'traceWebFilter' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tracingFilter' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceWebServletAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracingFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'httpTracing' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceHttpAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [brave.http.HttpTracing]: Factory method 'httpTracing' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'healthEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthEndpoint' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthContributorRegistry]: Factory method 'healthContributorRegistry' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'discoveryCompositeHealthIndicator' defined in class path resource [org/springframework/cloud/client/CommonsClientAutoConfiguration$DiscoveryLoadBalancerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.client.discovery.health.DiscoveryCompositeHealthIndicator]: Factory method 'discoveryCompositeHealthIndicator' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.boot.actuate.health.CompositeHealthIndicator.<init>(Lorg/springframework/boot/actuate/health/HealthAggregator;)V
+2022-04-15 00:00:38.989  INFO [bu-service,,,] 17360 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-15 00:00:38.989  WARN [bu-service,,,] 17360 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [MVStore background writer nio:D:/Workspaces/GIT_Space/Microservices/6_Centralized_Logging/h2db/buserviceDB.mv.db] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3283)
+2022-04-15 00:00:38.989  WARN [bu-service,,,] 17360 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2022-04-15 00:00:38.989  WARN [bu-service,,,] 17360 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.LinkedBlockingQueue.poll(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2022-04-15 00:00:38.989  WARN [bu-service,,,] 17360 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [spring.cloud.inetutils] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+ java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2022-04-15 00:00:38.989  WARN [bu-service,,,] 17360 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2022-04-15 00:00:39.005  INFO [bu-service,,,] 17360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-15 00:00:39.011  INFO [bu-service,,,] 17360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-15 00:00:39.033  INFO [bu-service,,,] 17360 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-15 00:00:39.038 ERROR [bu-service,,,] 17360 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.cloud.client.discovery.health.DiscoveryCompositeHealthIndicator.<init>(DiscoveryCompositeHealthIndicator.java:42)
+
+The following method did not exist:
+
+    org.springframework.boot.actuate.health.CompositeHealthIndicator.<init>(Lorg/springframework/boot/actuate/health/HealthAggregator;)V
+
+The method's class, org.springframework.boot.actuate.health.CompositeHealthIndicator, is available from the following locations:
+
+    jar:file:/C:/Users/UDHAYAKUMAR/.m2/repository/org/springframework/boot/spring-boot-actuator/2.2.6.RELEASE/spring-boot-actuator-2.2.6.RELEASE.jar!/org/springframework/boot/actuate/health/CompositeHealthIndicator.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/UDHAYAKUMAR/.m2/repository/org/springframework/boot/spring-boot-actuator/2.2.6.RELEASE/spring-boot-actuator-2.2.6.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.boot.actuate.health.CompositeHealthIndicator
+
+2022-04-15 00:03:48.358  INFO [bu-service,,,] 26584 --- [main] c.b.b.BusinessUnitServicesApplication    : The following profiles are active: dev
+2022-04-15 00:03:49.216  INFO [bu-service,,,] 26584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-15 00:03:49.275  INFO [bu-service,,,] 26584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 1 JPA repository interfaces.
+2022-04-15 00:03:49.443  WARN [bu-service,,,] 26584 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-04-15 00:03:49.738  INFO [bu-service,,,] 26584 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d6e36066-1943-308b-930f-cc57fb4c0f48
+2022-04-15 00:03:50.305  INFO [bu-service,,,] 26584 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e9fd99e8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-15 00:03:50.840  INFO [bu-service,,,] 26584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2022-04-15 00:03:50.850  INFO [bu-service,,,] 26584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-15 00:03:50.851  INFO [bu-service,,,] 26584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2022-04-15 00:03:50.995  INFO [bu-service,,,] 26584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-15 00:03:50.995  INFO [bu-service,,,] 26584 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2615 ms
+2022-04-15 00:03:51.177  WARN [bu-service,,,] 26584 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 00:03:51.178  INFO [bu-service,,,] 26584 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 00:03:51.200  INFO [bu-service,,,] 26584 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@628b819d
+2022-04-15 00:03:51.354  INFO [bu-service,,,] 26584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-15 00:03:51.627  INFO [bu-service,,,] 26584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-15 00:03:51.673  INFO [bu-service,,,] 26584 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../h2db/buserviceDB'
+2022-04-15 00:03:52.621 ERROR [bu-service,,,] 26584 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'traceWebFilter' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceWebServletAutoConfiguration.class]: Unsatisfied dependency expressed through method 'traceWebFilter' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tracingFilter' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceWebServletAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracingFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'httpTracing' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceHttpAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [brave.http.HttpTracing]: Factory method 'httpTracing' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'healthEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthEndpoint' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthContributorRegistry]: Factory method 'healthContributorRegistry' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'discoveryCompositeHealthIndicator' defined in class path resource [org/springframework/cloud/client/CommonsClientAutoConfiguration$DiscoveryLoadBalancerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.client.discovery.health.DiscoveryCompositeHealthIndicator]: Factory method 'discoveryCompositeHealthIndicator' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.boot.actuate.health.CompositeHealthIndicator.<init>(Lorg/springframework/boot/actuate/health/HealthAggregator;)V
+2022-04-15 00:03:52.663  INFO [bu-service,,,] 26584 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-15 00:03:52.667  WARN [bu-service,,,] 26584 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [MVStore background writer nio:D:/Workspaces/GIT_Space/Microservices/6_Centralized_Logging/h2db/buserviceDB.mv.db] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3283)
+2022-04-15 00:03:52.668  WARN [bu-service,,,] 26584 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2022-04-15 00:03:52.670  WARN [bu-service,,,] 26584 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.LinkedBlockingQueue.poll(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2022-04-15 00:03:52.671  WARN [bu-service,,,] 26584 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [spring.cloud.inetutils] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+ java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2022-04-15 00:03:52.674  WARN [bu-service,,,] 26584 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2022-04-15 00:03:52.677  INFO [bu-service,,,] 26584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-15 00:03:52.690  INFO [bu-service,,,] 26584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-15 00:03:52.715  INFO [bu-service,,,] 26584 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-15 00:03:52.721 ERROR [bu-service,,,] 26584 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.cloud.client.discovery.health.DiscoveryCompositeHealthIndicator.<init>(DiscoveryCompositeHealthIndicator.java:42)
+
+The following method did not exist:
+
+    org.springframework.boot.actuate.health.CompositeHealthIndicator.<init>(Lorg/springframework/boot/actuate/health/HealthAggregator;)V
+
+The method's class, org.springframework.boot.actuate.health.CompositeHealthIndicator, is available from the following locations:
+
+    jar:file:/C:/Users/UDHAYAKUMAR/.m2/repository/org/springframework/boot/spring-boot-actuator/2.2.6.RELEASE/spring-boot-actuator-2.2.6.RELEASE.jar!/org/springframework/boot/actuate/health/CompositeHealthIndicator.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/UDHAYAKUMAR/.m2/repository/org/springframework/boot/spring-boot-actuator/2.2.6.RELEASE/spring-boot-actuator-2.2.6.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.boot.actuate.health.CompositeHealthIndicator
+
+2022-04-15 00:06:34.964  INFO [bu-service,,,] 19332 --- [main] c.b.b.BusinessUnitServicesApplication    : The following profiles are active: dev
+2022-04-15 00:06:35.716  INFO [bu-service,,,] 19332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-15 00:06:35.795  INFO [bu-service,,,] 19332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70ms. Found 1 JPA repository interfaces.
+2022-04-15 00:06:35.995  WARN [bu-service,,,] 19332 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-04-15 00:06:36.258  INFO [bu-service,,,] 19332 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d6e36066-1943-308b-930f-cc57fb4c0f48
+2022-04-15 00:06:36.786  INFO [bu-service,,,] 19332 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4aec2f74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-15 00:06:37.268  INFO [bu-service,,,] 19332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2022-04-15 00:06:37.277  INFO [bu-service,,,] 19332 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-15 00:06:37.277  INFO [bu-service,,,] 19332 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2022-04-15 00:06:37.432  INFO [bu-service,,,] 19332 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-15 00:06:37.432  INFO [bu-service,,,] 19332 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2468 ms
+2022-04-15 00:06:37.594  WARN [bu-service,,,] 19332 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 00:06:37.594  INFO [bu-service,,,] 19332 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 00:06:37.610  INFO [bu-service,,,] 19332 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@423a0e1d
+2022-04-15 00:06:37.770  INFO [bu-service,,,] 19332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-15 00:06:38.160  INFO [bu-service,,,] 19332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-15 00:06:38.203  INFO [bu-service,,,] 19332 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../h2db/buserviceDB'
+2022-04-15 00:06:39.239 ERROR [bu-service,,,] 19332 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'traceWebFilter' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceWebServletAutoConfiguration.class]: Unsatisfied dependency expressed through method 'traceWebFilter' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tracingFilter' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceWebServletAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracingFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'httpTracing' defined in class path resource [org/springframework/cloud/sleuth/instrument/web/TraceHttpAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [brave.http.HttpTracing]: Factory method 'httpTracing' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'healthEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthEndpoint' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.health.HealthContributorRegistry]: Factory method 'healthContributorRegistry' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'discoveryCompositeHealthIndicator' defined in class path resource [org/springframework/cloud/client/CommonsClientAutoConfiguration$DiscoveryLoadBalancerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.client.discovery.health.DiscoveryCompositeHealthIndicator]: Factory method 'discoveryCompositeHealthIndicator' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.boot.actuate.health.CompositeHealthIndicator.<init>(Lorg/springframework/boot/actuate/health/HealthAggregator;)V
+2022-04-15 00:06:39.305  INFO [bu-service,,,] 19332 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-15 00:06:39.305  WARN [bu-service,,,] 19332 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [MVStore background writer nio:D:/Workspaces/GIT_Space/Microservices/6_Centralized_Logging/h2db/buserviceDB.mv.db] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.h2.mvstore.MVStore$BackgroundWriterThread.run(MVStore.java:3283)
+2022-04-15 00:06:39.305  WARN [bu-service,,,] 19332 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2022-04-15 00:06:39.305  WARN [bu-service,,,] 19332 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.LinkedBlockingQueue.poll(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2022-04-15 00:06:39.305  WARN [bu-service,,,] 19332 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [spring.cloud.inetutils] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+ java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2022-04-15 00:06:39.321  WARN [bu-service,,,] 19332 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2022-04-15 00:06:39.326  INFO [bu-service,,,] 19332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-15 00:06:39.345  INFO [bu-service,,,] 19332 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-15 00:06:39.372  INFO [bu-service,,,] 19332 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-15 00:06:39.372 ERROR [bu-service,,,] 19332 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.cloud.client.discovery.health.DiscoveryCompositeHealthIndicator.<init>(DiscoveryCompositeHealthIndicator.java:42)
+
+The following method did not exist:
+
+    org.springframework.boot.actuate.health.CompositeHealthIndicator.<init>(Lorg/springframework/boot/actuate/health/HealthAggregator;)V
+
+The method's class, org.springframework.boot.actuate.health.CompositeHealthIndicator, is available from the following locations:
+
+    jar:file:/C:/Users/UDHAYAKUMAR/.m2/repository/org/springframework/boot/spring-boot-actuator/2.2.6.RELEASE/spring-boot-actuator-2.2.6.RELEASE.jar!/org/springframework/boot/actuate/health/CompositeHealthIndicator.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/UDHAYAKUMAR/.m2/repository/org/springframework/boot/spring-boot-actuator/2.2.6.RELEASE/spring-boot-actuator-2.2.6.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.boot.actuate.health.CompositeHealthIndicator
+
+2022-04-15 00:45:24.297  INFO [bu-service,,,] 16184 --- [main] c.b.b.BusinessUnitServicesApplication    : The following profiles are active: dev
+2022-04-15 00:45:25.191  INFO [bu-service,,,] 16184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-15 00:45:25.420  INFO [bu-service,,,] 16184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 203ms. Found 1 JPA repository interfaces.
+2022-04-15 00:45:25.527  WARN [bu-service,,,] 16184 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-04-15 00:45:25.863  INFO [bu-service,,,] 16184 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4188564c-1895-31a2-80ca-f519756a8552
+2022-04-15 00:45:26.845  INFO [bu-service,,,] 16184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2022-04-15 00:45:26.907  INFO [bu-service,,,] 16184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-15 00:45:26.907  INFO [bu-service,,,] 16184 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2022-04-15 00:45:27.125  INFO [bu-service,,,] 16184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-15 00:45:27.125  INFO [bu-service,,,] 16184 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2812 ms
+2022-04-15 00:45:27.293  WARN [bu-service,,,] 16184 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 00:45:27.293  INFO [bu-service,,,] 16184 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 00:45:27.325  INFO [bu-service,,,] 16184 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@1653b84e
+2022-04-15 00:45:27.433  INFO [bu-service,,,] 16184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-15 00:45:27.765  INFO [bu-service,,,] 16184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-15 00:45:27.797  INFO [bu-service,,,] 16184 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../h2db/buserviceDB'
+2022-04-15 00:45:28.838  INFO [bu-service,,,] 16184 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-15 00:45:28.948  INFO [bu-service,,,] 16184 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-04-15 00:45:29.188  INFO [bu-service,,,] 16184 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-04-15 00:45:29.345  INFO [bu-service,,,] 16184 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-15 00:45:30.094  INFO [bu-service,,,] 16184 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-15 00:45:30.099  INFO [bu-service,,,] 16184 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 00:45:30.545  WARN [bu-service,,,] 16184 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 00:45:30.545  INFO [bu-service,,,] 16184 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 00:45:30.682  WARN [bu-service,,,] 16184 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-15 00:45:30.965  INFO [bu-service,,,] 16184 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-15 00:45:31.922  WARN [bu-service,,,] 16184 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-04-15 00:45:32.169  INFO [bu-service,,,] 16184 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-15 00:45:32.217  INFO [bu-service,,,] 16184 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-04-15 00:45:32.333  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-04-15 00:45:32.661  INFO [bu-service,,,] 16184 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-04-15 00:45:32.661  INFO [bu-service,,,] 16184 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-04-15 00:45:32.789  INFO [bu-service,,,] 16184 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-04-15 00:45:32.789  INFO [bu-service,,,] 16184 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-04-15 00:45:33.003  INFO [bu-service,,,] 16184 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 00:45:33.130  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-04-15 00:45:33.130  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-04-15 00:45:33.130  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-04-15 00:45:33.130  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-04-15 00:45:33.130  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-04-15 00:45:33.130  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-04-15 00:45:33.130  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-04-15 00:45:33.288  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-04-15 00:45:33.300  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-04-15 00:45:33.300  INFO [bu-service,,,] 16184 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-04-15 00:45:33.300  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1649963733300 with initial instances count: 1
+2022-04-15 00:45:33.316  INFO [bu-service,,,] 16184 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BU-SERVICE with eureka with status UP
+2022-04-15 00:45:33.316  INFO [bu-service,,,] 16184 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1649963733316, current=UP, previous=STARTING]
+2022-04-15 00:45:33.316  INFO [bu-service,,,] 16184 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087: registering service...
+2022-04-15 00:45:33.371  INFO [bu-service,,,] 16184 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087 - registration status: 204
+2022-04-15 00:45:33.388  INFO [bu-service,,,] 16184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8087 (http) with context path ''
+2022-04-15 00:45:33.388  INFO [bu-service,,,] 16184 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2022-04-15 00:45:33.566  INFO [bu-service,,,] 16184 --- [main] c.b.b.BusinessUnitServicesApplication    : Started BusinessUnitServicesApplication in 14.38 seconds (JVM running for 14.758)
+2022-04-15 00:46:51.253  INFO [bu-service,,,] 16184 --- [http-nio-8087-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-15 00:46:51.269  INFO [bu-service,,,] 16184 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-15 00:46:51.612  INFO [bu-service,,,] 16184 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 342 ms
+2022-04-15 00:46:52.605  INFO [bu-service,337ad408d3e75fac,380bc74331e37aba,true] 16184 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 00:46:52.607  INFO [bu-service,337ad408d3e75fac,380bc74331e37aba,true] 16184 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 00:48:11.976  INFO [bu-service,e417d56c7726f6cd,835adfdca61d45ac,true] 16184 --- [http-nio-8087-exec-2] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 00:48:11.977  INFO [bu-service,e417d56c7726f6cd,835adfdca61d45ac,true] 16184 --- [http-nio-8087-exec-2] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 00:49:04.639  INFO [bu-service,4a9e5d65de605041,659636e0a267ecf1,true] 16184 --- [http-nio-8087-exec-3] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 00:49:04.641  INFO [bu-service,4a9e5d65de605041,659636e0a267ecf1,true] 16184 --- [http-nio-8087-exec-3] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 00:50:33.147  INFO [bu-service,,,] 16184 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 00:55:33.165  INFO [bu-service,,,] 16184 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 01:28:21.784  INFO [bu-service,,,] 19676 --- [main] c.b.b.BusinessUnitServicesApplication    : The following profiles are active: dev
+2022-04-15 01:28:22.589  INFO [bu-service,,,] 19676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-15 01:28:22.813  INFO [bu-service,,,] 19676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 205ms. Found 1 JPA repository interfaces.
+2022-04-15 01:28:22.970  WARN [bu-service,,,] 19676 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-04-15 01:28:23.381  INFO [bu-service,,,] 19676 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4188564c-1895-31a2-80ca-f519756a8552
+2022-04-15 01:28:24.952  INFO [bu-service,,,] 19676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2022-04-15 01:28:24.972  INFO [bu-service,,,] 19676 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-15 01:28:24.972  INFO [bu-service,,,] 19676 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2022-04-15 01:28:25.246  INFO [bu-service,,,] 19676 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-15 01:28:25.246  INFO [bu-service,,,] 19676 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3446 ms
+2022-04-15 01:28:25.506  WARN [bu-service,,,] 19676 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 01:28:25.506  INFO [bu-service,,,] 19676 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 01:28:25.538  INFO [bu-service,,,] 19676 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@209f3887
+2022-04-15 01:28:25.670  INFO [bu-service,,,] 19676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-15 01:28:26.204  INFO [bu-service,,,] 19676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-15 01:28:26.274  INFO [bu-service,,,] 19676 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../h2db/buserviceDB'
+2022-04-15 01:28:28.047  INFO [bu-service,,,] 19676 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-15 01:28:28.208  INFO [bu-service,,,] 19676 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-04-15 01:28:28.514  INFO [bu-service,,,] 19676 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-04-15 01:28:28.807  INFO [bu-service,,,] 19676 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-15 01:28:29.998  INFO [bu-service,,,] 19676 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-15 01:28:30.001  INFO [bu-service,,,] 19676 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 01:28:30.620  WARN [bu-service,,,] 19676 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 01:28:30.621  INFO [bu-service,,,] 19676 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 01:28:30.828  WARN [bu-service,,,] 19676 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-15 01:28:31.319  INFO [bu-service,,,] 19676 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-15 01:28:32.880  WARN [bu-service,,,] 19676 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-04-15 01:28:33.270  INFO [bu-service,,,] 19676 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-15 01:28:33.377  INFO [bu-service,,,] 19676 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-04-15 01:28:33.531  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-04-15 01:28:34.084  INFO [bu-service,,,] 19676 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-04-15 01:28:34.084  INFO [bu-service,,,] 19676 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-04-15 01:28:34.352  INFO [bu-service,,,] 19676 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-04-15 01:28:34.352  INFO [bu-service,,,] 19676 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-04-15 01:28:34.648  INFO [bu-service,,,] 19676 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 01:28:34.914  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-04-15 01:28:34.914  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-04-15 01:28:34.914  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-04-15 01:28:34.914  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-04-15 01:28:34.914  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-04-15 01:28:34.914  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-04-15 01:28:34.914  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-04-15 01:28:35.183  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-04-15 01:28:35.194  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-04-15 01:28:35.194  INFO [bu-service,,,] 19676 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-04-15 01:28:35.210  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1649966315194 with initial instances count: 1
+2022-04-15 01:28:35.210  INFO [bu-service,,,] 19676 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BU-SERVICE with eureka with status UP
+2022-04-15 01:28:35.210  INFO [bu-service,,,] 19676 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1649966315210, current=UP, previous=STARTING]
+2022-04-15 01:28:35.227  INFO [bu-service,,,] 19676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087: registering service...
+2022-04-15 01:28:35.295  INFO [bu-service,,,] 19676 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087 - registration status: 204
+2022-04-15 01:28:35.333  INFO [bu-service,,,] 19676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8087 (http) with context path ''
+2022-04-15 01:28:35.333  INFO [bu-service,,,] 19676 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2022-04-15 01:28:35.830  INFO [bu-service,,,] 19676 --- [main] c.b.b.BusinessUnitServicesApplication    : Started BusinessUnitServicesApplication in 19.665 seconds (JVM running for 20.16)
+2022-04-15 01:29:48.675  INFO [bu-service,,,] 19676 --- [http-nio-8087-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-15 01:29:48.676  INFO [bu-service,,,] 19676 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-15 01:29:48.702  INFO [bu-service,,,] 19676 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
+2022-04-15 01:29:52.325  INFO [bu-service,4150e744ad6a1391,4150e744ad6a1391,true] 19676 --- [http-nio-8087-exec-5] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:29:52.325  INFO [bu-service,4150e744ad6a1391,4150e744ad6a1391,true] 19676 --- [http-nio-8087-exec-5] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:33:34.942  INFO [bu-service,,,] 19676 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 01:38:29.064  INFO [bu-service,,,] 25928 --- [main] c.b.b.BusinessUnitServicesApplication    : The following profiles are active: dev
+2022-04-15 01:38:29.707  INFO [bu-service,,,] 25928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-15 01:38:29.837  INFO [bu-service,,,] 25928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128ms. Found 1 JPA repository interfaces.
+2022-04-15 01:38:29.966  WARN [bu-service,,,] 25928 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-04-15 01:38:30.267  INFO [bu-service,,,] 25928 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ec421235-dcee-3b94-a4eb-89764cf0089f
+2022-04-15 01:38:31.181  INFO [bu-service,,,] 25928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2022-04-15 01:38:31.198  INFO [bu-service,,,] 25928 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-15 01:38:31.198  INFO [bu-service,,,] 25928 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2022-04-15 01:38:31.357  INFO [bu-service,,,] 25928 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-15 01:38:31.371  INFO [bu-service,,,] 25928 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2293 ms
+2022-04-15 01:38:31.500  WARN [bu-service,,,] 25928 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 01:38:31.500  INFO [bu-service,,,] 25928 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 01:38:31.526  INFO [bu-service,,,] 25928 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@1e6060f1
+2022-04-15 01:38:31.608  INFO [bu-service,,,] 25928 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-15 01:38:31.847  INFO [bu-service,,,] 25928 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-15 01:38:31.887  INFO [bu-service,,,] 25928 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../h2db/buserviceDB'
+2022-04-15 01:38:32.969  WARN [bu-service,,,] 25928 --- [main] o.s.c.s.zipkin2.ZipkinAutoConfiguration  : Check result of the [org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@49c83262] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "https://localhost:9411/api/v2/spans": Unrecognized SSL message, plaintext connection?; nested exception is javax.net.ssl.SSLException: Unrecognized SSL message, plaintext connection?}]
+2022-04-15 01:38:33.301  INFO [bu-service,,,] 25928 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-15 01:38:33.380  INFO [bu-service,,,] 25928 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-04-15 01:38:33.529  INFO [bu-service,,,] 25928 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-04-15 01:38:33.661  INFO [bu-service,,,] 25928 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-15 01:38:34.454  INFO [bu-service,,,] 25928 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-15 01:38:34.457  INFO [bu-service,,,] 25928 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 01:38:34.778  WARN [bu-service,,,] 25928 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 01:38:34.778  INFO [bu-service,,,] 25928 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 01:38:34.868  WARN [bu-service,,,] 25928 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-15 01:38:35.075  INFO [bu-service,,,] 25928 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-15 01:38:35.800  WARN [bu-service,,,] 25928 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-04-15 01:38:36.221  INFO [bu-service,,,] 25928 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-15 01:38:36.269  INFO [bu-service,,,] 25928 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-04-15 01:38:36.351  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-04-15 01:38:36.430  INFO [bu-service,,,] 25928 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-04-15 01:38:36.430  INFO [bu-service,,,] 25928 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-04-15 01:38:36.572  INFO [bu-service,,,] 25928 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-04-15 01:38:36.572  INFO [bu-service,,,] 25928 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-04-15 01:38:36.769  INFO [bu-service,,,] 25928 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 01:38:36.908  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-04-15 01:38:36.908  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-04-15 01:38:36.908  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-04-15 01:38:36.912  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-04-15 01:38:36.912  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-04-15 01:38:36.912  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-04-15 01:38:36.912  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-04-15 01:38:37.056  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-04-15 01:38:37.056  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-04-15 01:38:37.073  INFO [bu-service,,,] 25928 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-04-15 01:38:37.073  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1649966917073 with initial instances count: 3
+2022-04-15 01:38:37.073  INFO [bu-service,,,] 25928 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BU-SERVICE with eureka with status UP
+2022-04-15 01:38:37.073  INFO [bu-service,,,] 25928 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1649966917073, current=UP, previous=STARTING]
+2022-04-15 01:38:37.088  INFO [bu-service,,,] 25928 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087: registering service...
+2022-04-15 01:38:37.161  INFO [bu-service,,,] 25928 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087 - registration status: 204
+2022-04-15 01:38:37.161  INFO [bu-service,,,] 25928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8087 (http) with context path ''
+2022-04-15 01:38:37.161  INFO [bu-service,,,] 25928 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2022-04-15 01:38:37.371  INFO [bu-service,,,] 25928 --- [main] c.b.b.BusinessUnitServicesApplication    : Started BusinessUnitServicesApplication in 13.074 seconds (JVM running for 13.45)
+2022-04-15 01:38:48.561  INFO [bu-service,,,] 25928 --- [http-nio-8087-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-15 01:38:48.561  INFO [bu-service,,,] 25928 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-15 01:38:48.586  INFO [bu-service,,,] 25928 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2022-04-15 01:38:48.649  INFO [bu-service,2a9607c95d748998,2a9607c95d748998,true] 25928 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:38:48.649  INFO [bu-service,2a9607c95d748998,2a9607c95d748998,true] 25928 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:38:50.098  WARN [bu-service,,,] 25928 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@49c83262}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-04-15 01:38:50.107  WARN [bu-service,,,] 25928 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@49c83262}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "https://localhost:9411/api/v2/spans": Unrecognized SSL message, plaintext connection?; nested exception is javax.net.ssl.SSLException: Unrecognized SSL message, plaintext connection?)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "https://localhost:9411/api/v2/spans": Unrecognized SSL message, plaintext connection?; nested exception is javax.net.ssl.SSLException: Unrecognized SSL message, plaintext connection?
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:748) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:228) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at zipkin2.Call$Base.execute(Call.java:380) ~[zipkin-2.21.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.15.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) [zipkin-reporter-2.15.0.jar:na]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_161]
+Caused by: javax.net.ssl.SSLException: Unrecognized SSL message, plaintext connection?
+	at sun.security.ssl.InputRecord.handleUnknownRecord(Unknown Source) ~[na:1.8.0_161]
+	at sun.security.ssl.InputRecord.read(Unknown Source) ~[na:1.8.0_161]
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source) ~[na:1.8.0_161]
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source) ~[na:1.8.0_161]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source) ~[na:1.8.0_161]
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source) ~[na:1.8.0_161]
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source) ~[na:1.8.0_161]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source) ~[na:1.8.0_161]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(Unknown Source) ~[na:1.8.0_161]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:739) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 9 common frames omitted
+
+2022-04-15 01:42:16.224  INFO [bu-service,,,] 26616 --- [main] c.b.b.BusinessUnitServicesApplication    : The following profiles are active: dev
+2022-04-15 01:42:16.937  INFO [bu-service,,,] 26616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-15 01:42:17.080  INFO [bu-service,,,] 26616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131ms. Found 1 JPA repository interfaces.
+2022-04-15 01:42:17.179  WARN [bu-service,,,] 26616 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-04-15 01:42:17.501  INFO [bu-service,,,] 26616 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ec421235-dcee-3b94-a4eb-89764cf0089f
+2022-04-15 01:42:18.440  INFO [bu-service,,,] 26616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2022-04-15 01:42:18.451  INFO [bu-service,,,] 26616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-15 01:42:18.451  INFO [bu-service,,,] 26616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2022-04-15 01:42:18.628  INFO [bu-service,,,] 26616 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-15 01:42:18.628  INFO [bu-service,,,] 26616 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2388 ms
+2022-04-15 01:42:18.791  WARN [bu-service,,,] 26616 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 01:42:18.791  INFO [bu-service,,,] 26616 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 01:42:18.806  INFO [bu-service,,,] 26616 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@1511d157
+2022-04-15 01:42:18.889  INFO [bu-service,,,] 26616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-15 01:42:19.119  INFO [bu-service,,,] 26616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-15 01:42:19.185  INFO [bu-service,,,] 26616 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../h2db/buserviceDB'
+2022-04-15 01:42:19.973  WARN [bu-service,,,] 26616 --- [main] o.s.c.s.zipkin2.ZipkinAutoConfiguration  : Check result of the [org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@1d1c37d5] contains an error [CheckResult{ok=false, error=java.lang.IllegalArgumentException: Illegal character in opaque part at index 14: localhost:9411 /api/v2/spans}]
+2022-04-15 01:42:20.336  INFO [bu-service,,,] 26616 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-15 01:42:20.436  INFO [bu-service,,,] 26616 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-04-15 01:42:20.582  INFO [bu-service,,,] 26616 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-04-15 01:42:20.709  INFO [bu-service,,,] 26616 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-15 01:42:21.322  INFO [bu-service,,,] 26616 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-15 01:42:21.329  INFO [bu-service,,,] 26616 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 01:42:21.653  WARN [bu-service,,,] 26616 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 01:42:21.653  INFO [bu-service,,,] 26616 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 01:42:21.736  WARN [bu-service,,,] 26616 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-15 01:42:21.964  INFO [bu-service,,,] 26616 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-15 01:42:22.804  WARN [bu-service,,,] 26616 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-04-15 01:42:23.194  INFO [bu-service,,,] 26616 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-15 01:42:23.258  INFO [bu-service,,,] 26616 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-04-15 01:42:23.323  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-04-15 01:42:23.597  INFO [bu-service,,,] 26616 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-04-15 01:42:23.597  INFO [bu-service,,,] 26616 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-04-15 01:42:23.725  INFO [bu-service,,,] 26616 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-04-15 01:42:23.725  INFO [bu-service,,,] 26616 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-04-15 01:42:23.903  INFO [bu-service,,,] 26616 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 01:42:24.018  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-04-15 01:42:24.018  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-04-15 01:42:24.018  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-04-15 01:42:24.018  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-04-15 01:42:24.018  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-04-15 01:42:24.018  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-04-15 01:42:24.018  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-04-15 01:42:24.167  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-04-15 01:42:24.183  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-04-15 01:42:24.183  INFO [bu-service,,,] 26616 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-04-15 01:42:24.183  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1649967144183 with initial instances count: 2
+2022-04-15 01:42:24.183  INFO [bu-service,,,] 26616 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BU-SERVICE with eureka with status UP
+2022-04-15 01:42:24.183  INFO [bu-service,,,] 26616 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1649967144183, current=UP, previous=STARTING]
+2022-04-15 01:42:24.199  INFO [bu-service,,,] 26616 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087: registering service...
+2022-04-15 01:42:24.249  INFO [bu-service,,,] 26616 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087 - registration status: 204
+2022-04-15 01:42:24.256  INFO [bu-service,,,] 26616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8087 (http) with context path ''
+2022-04-15 01:42:24.256  INFO [bu-service,,,] 26616 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2022-04-15 01:42:24.466  INFO [bu-service,,,] 26616 --- [main] c.b.b.BusinessUnitServicesApplication    : Started BusinessUnitServicesApplication in 10.786 seconds (JVM running for 11.158)
+2022-04-15 01:42:34.485  INFO [bu-service,,,] 26616 --- [http-nio-8087-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-15 01:42:34.486  INFO [bu-service,,,] 26616 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-15 01:42:34.506  INFO [bu-service,,,] 26616 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2022-04-15 01:42:34.567  INFO [bu-service,004c7633292c8d0c,004c7633292c8d0c,true] 26616 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:42:34.567  INFO [bu-service,004c7633292c8d0c,004c7633292c8d0c,true] 26616 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:42:35.940  WARN [bu-service,,,] 26616 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@1d1c37d5}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-04-15 01:42:35.948  WARN [bu-service,,,] 26616 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@1d1c37d5}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to IllegalArgumentException(Illegal character in opaque part at index 14: localhost:9411 /api/v2/spans)
+
+java.lang.IllegalArgumentException: Illegal character in opaque part at index 14: localhost:9411 /api/v2/spans
+	at java.net.URI.create(Unknown Source) ~[na:1.8.0_161]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:128) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at zipkin2.Call$Base.execute(Call.java:380) ~[zipkin-2.21.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.15.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) [zipkin-reporter-2.15.0.jar:na]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_161]
+Caused by: java.net.URISyntaxException: Illegal character in opaque part at index 14: localhost:9411 /api/v2/spans
+	at java.net.URI$Parser.fail(Unknown Source) ~[na:1.8.0_161]
+	at java.net.URI$Parser.checkChars(Unknown Source) ~[na:1.8.0_161]
+	at java.net.URI$Parser.parse(Unknown Source) ~[na:1.8.0_161]
+	at java.net.URI.<init>(Unknown Source) ~[na:1.8.0_161]
+	... 8 common frames omitted
+
+2022-04-15 01:44:16.321  INFO [bu-service,,,] 1276 --- [main] c.b.b.BusinessUnitServicesApplication    : The following profiles are active: dev
+2022-04-15 01:44:16.997  INFO [bu-service,,,] 1276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-15 01:44:17.139  INFO [bu-service,,,] 1276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132ms. Found 1 JPA repository interfaces.
+2022-04-15 01:44:17.263  WARN [bu-service,,,] 1276 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-04-15 01:44:17.564  INFO [bu-service,,,] 1276 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ec421235-dcee-3b94-a4eb-89764cf0089f
+2022-04-15 01:44:18.471  INFO [bu-service,,,] 1276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2022-04-15 01:44:18.478  INFO [bu-service,,,] 1276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-15 01:44:18.478  INFO [bu-service,,,] 1276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2022-04-15 01:44:18.638  INFO [bu-service,,,] 1276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-15 01:44:18.638  INFO [bu-service,,,] 1276 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2301 ms
+2022-04-15 01:44:18.781  WARN [bu-service,,,] 1276 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 01:44:18.781  INFO [bu-service,,,] 1276 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 01:44:18.797  INFO [bu-service,,,] 1276 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@48bc2fce
+2022-04-15 01:44:18.893  INFO [bu-service,,,] 1276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-15 01:44:19.158  INFO [bu-service,,,] 1276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-15 01:44:19.205  INFO [bu-service,,,] 1276 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../h2db/buserviceDB'
+2022-04-15 01:44:19.945  WARN [bu-service,,,] 1276 --- [main] o.s.c.s.zipkin2.ZipkinAutoConfiguration  : Check result of the [org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@20864cd1] contains an error [CheckResult{ok=false, error=java.lang.NullPointerException}]
+2022-04-15 01:44:20.309  INFO [bu-service,,,] 1276 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-15 01:44:20.447  INFO [bu-service,,,] 1276 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-04-15 01:44:20.654  INFO [bu-service,,,] 1276 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-04-15 01:44:20.799  INFO [bu-service,,,] 1276 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-15 01:44:21.483  INFO [bu-service,,,] 1276 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-15 01:44:21.491  INFO [bu-service,,,] 1276 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 01:44:21.837  WARN [bu-service,,,] 1276 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 01:44:21.851  INFO [bu-service,,,] 1276 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 01:44:21.937  WARN [bu-service,,,] 1276 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-15 01:44:22.137  INFO [bu-service,,,] 1276 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-15 01:44:22.904  WARN [bu-service,,,] 1276 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-04-15 01:44:23.404  INFO [bu-service,,,] 1276 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-15 01:44:23.478  INFO [bu-service,,,] 1276 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-04-15 01:44:23.578  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-04-15 01:44:23.980  INFO [bu-service,,,] 1276 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-04-15 01:44:23.980  INFO [bu-service,,,] 1276 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-04-15 01:44:24.156  INFO [bu-service,,,] 1276 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-04-15 01:44:24.157  INFO [bu-service,,,] 1276 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-04-15 01:44:24.341  INFO [bu-service,,,] 1276 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 01:44:24.469  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-04-15 01:44:24.469  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-04-15 01:44:24.469  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-04-15 01:44:24.469  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-04-15 01:44:24.469  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-04-15 01:44:24.469  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-04-15 01:44:24.469  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-04-15 01:44:24.675  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-04-15 01:44:24.680  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-04-15 01:44:24.683  INFO [bu-service,,,] 1276 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-04-15 01:44:24.690  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1649967264688 with initial instances count: 2
+2022-04-15 01:44:24.700  INFO [bu-service,,,] 1276 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BU-SERVICE with eureka with status UP
+2022-04-15 01:44:24.701  INFO [bu-service,,,] 1276 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1649967264701, current=UP, previous=STARTING]
+2022-04-15 01:44:24.708  INFO [bu-service,,,] 1276 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087: registering service...
+2022-04-15 01:44:24.765  INFO [bu-service,,,] 1276 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087 - registration status: 204
+2022-04-15 01:44:24.789  INFO [bu-service,,,] 1276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8087 (http) with context path ''
+2022-04-15 01:44:24.789  INFO [bu-service,,,] 1276 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2022-04-15 01:44:25.014  INFO [bu-service,,,] 1276 --- [main] c.b.b.BusinessUnitServicesApplication    : Started BusinessUnitServicesApplication in 11.223 seconds (JVM running for 11.602)
+2022-04-15 01:44:30.916  INFO [bu-service,,,] 1276 --- [http-nio-8087-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-15 01:44:30.916  INFO [bu-service,,,] 1276 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-15 01:44:30.938  INFO [bu-service,,,] 1276 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2022-04-15 01:44:30.998  INFO [bu-service,6dae311aa8fa652b,6dae311aa8fa652b,true] 1276 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:44:30.998  INFO [bu-service,6dae311aa8fa652b,6dae311aa8fa652b,true] 1276 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:44:32.381  WARN [bu-service,,,] 1276 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@20864cd1}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-04-15 01:44:32.386  WARN [bu-service,,,] 1276 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@20864cd1}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to NullPointerException()
+
+java.lang.NullPointerException: null
+	at java.util.concurrent.ConcurrentHashMap.get(Unknown Source) ~[na:1.8.0_161]
+	at java.util.concurrent.ConcurrentHashMap.containsKey(Unknown Source) ~[na:1.8.0_161]
+	at org.springframework.cloud.context.named.NamedContextFactory.getContext(NamedContextFactory.java:98) ~[spring-cloud-context-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.SpringClientFactory.getContext(SpringClientFactory.java:131) ~[spring-cloud-netflix-ribbon-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.getInstance(NamedContextFactory.java:145) ~[spring-cloud-context-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.SpringClientFactory.getInstance(SpringClientFactory.java:121) ~[spring-cloud-netflix-ribbon-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.SpringClientFactory.getLoadBalancer(SpringClientFactory.java:65) ~[spring-cloud-netflix-ribbon-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.RibbonLoadBalancerClient.getLoadBalancer(RibbonLoadBalancerClient.java:193) ~[spring-cloud-netflix-ribbon-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.RibbonLoadBalancerClient.choose(RibbonLoadBalancerClient.java:88) ~[spring-cloud-netflix-ribbon-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.netflix.ribbon.RibbonLoadBalancerClient.choose(RibbonLoadBalancerClient.java:78) ~[spring-cloud-netflix-ribbon-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.LoadBalancerClientZipkinLoadBalancer.instance(LoadBalancerClientZipkinLoadBalancer.java:43) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateSenderConfiguration$CachingZipkinUrlExtractor.zipkinUrl(ZipkinRestTemplateSenderConfiguration.java:93) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:226) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:641) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:129) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:142) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:132) ~[spring-cloud-sleuth-zipkin-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at zipkin2.Call$Base.execute(Call.java:380) ~[zipkin-2.21.1.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.15.0.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) [zipkin-reporter-2.15.0.jar:na]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_161]
+
+2022-04-15 01:46:19.379  INFO [bu-service,161b843b0c11b0cf,d49a862f8add84db,true] 1276 --- [http-nio-8087-exec-5] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:46:19.385  INFO [bu-service,161b843b0c11b0cf,d49a862f8add84db,true] 1276 --- [http-nio-8087-exec-5] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:46:54.305  INFO [bu-service,15e1da432da8dc30,c44507691c3b7222,true] 1276 --- [http-nio-8087-exec-4] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:46:54.306  INFO [bu-service,15e1da432da8dc30,c44507691c3b7222,true] 1276 --- [http-nio-8087-exec-4] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:49:24.496  INFO [bu-service,,,] 1276 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 01:52:03.468  INFO [bu-service,08a2c605558ec1c9,af399bdb3f7a096c,true] 1276 --- [http-nio-8087-exec-7] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:52:03.469  INFO [bu-service,08a2c605558ec1c9,af399bdb3f7a096c,true] 1276 --- [http-nio-8087-exec-7] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:52:09.504  INFO [bu-service,35679b5eda74197f,8bcb21aa6fa718fb,true] 1276 --- [http-nio-8087-exec-8] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:52:09.504  INFO [bu-service,35679b5eda74197f,8bcb21aa6fa718fb,true] 1276 --- [http-nio-8087-exec-8] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:52:10.377  INFO [bu-service,e12a175cabc08dd4,973a8b55f3267452,true] 1276 --- [http-nio-8087-exec-9] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:52:10.377  INFO [bu-service,e12a175cabc08dd4,973a8b55f3267452,true] 1276 --- [http-nio-8087-exec-9] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:52:20.844  INFO [bu-service,7ceaa17465c31a42,e3788394f8caf3d2,true] 1276 --- [http-nio-8087-exec-10] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:52:20.844  INFO [bu-service,7ceaa17465c31a42,e3788394f8caf3d2,true] 1276 --- [http-nio-8087-exec-10] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:52:22.458  INFO [bu-service,3e55d6bbf2f63eb9,15cf995ab00e6766,true] 1276 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:52:22.458  INFO [bu-service,3e55d6bbf2f63eb9,15cf995ab00e6766,true] 1276 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:53:15.652  INFO [bu-service,99eaa65ed5d1699b,93258f6a99911913,true] 1276 --- [http-nio-8087-exec-2] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:53:15.653  INFO [bu-service,99eaa65ed5d1699b,93258f6a99911913,true] 1276 --- [http-nio-8087-exec-2] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:53:19.457  INFO [bu-service,11b817ce528c610e,c3f0ef791bf09a30,true] 1276 --- [http-nio-8087-exec-3] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:53:19.458  INFO [bu-service,11b817ce528c610e,c3f0ef791bf09a30,true] 1276 --- [http-nio-8087-exec-3] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:54:00.418  INFO [bu-service,542432b50bfe2649,04649a2c98397d37,true] 1276 --- [http-nio-8087-exec-5] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:54:00.418  INFO [bu-service,542432b50bfe2649,04649a2c98397d37,true] 1276 --- [http-nio-8087-exec-5] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:54:01.924  INFO [bu-service,9eef4ab8ad6f05ce,37e68b44036fe139,true] 1276 --- [http-nio-8087-exec-4] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:54:01.924  INFO [bu-service,9eef4ab8ad6f05ce,37e68b44036fe139,true] 1276 --- [http-nio-8087-exec-4] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:54:24.507  INFO [bu-service,,,] 1276 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 01:56:58.475  INFO [bu-service,,,] 1744 --- [main] c.b.b.BusinessUnitServicesApplication    : The following profiles are active: dev
+2022-04-15 01:56:59.196  INFO [bu-service,,,] 1744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-15 01:56:59.330  INFO [bu-service,,,] 1744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125ms. Found 1 JPA repository interfaces.
+2022-04-15 01:56:59.446  WARN [bu-service,,,] 1744 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-04-15 01:56:59.775  INFO [bu-service,,,] 1744 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ec421235-dcee-3b94-a4eb-89764cf0089f
+2022-04-15 01:57:00.759  INFO [bu-service,,,] 1744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2022-04-15 01:57:00.761  INFO [bu-service,,,] 1744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-15 01:57:00.761  INFO [bu-service,,,] 1744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2022-04-15 01:57:00.929  INFO [bu-service,,,] 1744 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-15 01:57:00.929  INFO [bu-service,,,] 1744 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2435 ms
+2022-04-15 01:57:01.066  WARN [bu-service,,,] 1744 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 01:57:01.066  INFO [bu-service,,,] 1744 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 01:57:01.084  INFO [bu-service,,,] 1744 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@69796bd0
+2022-04-15 01:57:01.179  INFO [bu-service,,,] 1744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-15 01:57:01.479  INFO [bu-service,,,] 1744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-15 01:57:01.510  INFO [bu-service,,,] 1744 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../h2db/buserviceDB'
+2022-04-15 01:57:02.770  INFO [bu-service,,,] 1744 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-15 01:57:02.901  INFO [bu-service,,,] 1744 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-04-15 01:57:03.102  INFO [bu-service,,,] 1744 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-04-15 01:57:03.285  INFO [bu-service,,,] 1744 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-15 01:57:04.154  INFO [bu-service,,,] 1744 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-15 01:57:04.163  INFO [bu-service,,,] 1744 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 01:57:04.626  WARN [bu-service,,,] 1744 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 01:57:04.626  INFO [bu-service,,,] 1744 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 01:57:04.750  WARN [bu-service,,,] 1744 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-15 01:57:04.989  INFO [bu-service,,,] 1744 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-15 01:57:05.765  WARN [bu-service,,,] 1744 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-04-15 01:57:06.163  INFO [bu-service,,,] 1744 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-15 01:57:06.222  INFO [bu-service,,,] 1744 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-04-15 01:57:06.281  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-04-15 01:57:06.627  INFO [bu-service,,,] 1744 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-04-15 01:57:06.627  INFO [bu-service,,,] 1744 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-04-15 01:57:06.795  INFO [bu-service,,,] 1744 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-04-15 01:57:06.795  INFO [bu-service,,,] 1744 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-04-15 01:57:06.977  INFO [bu-service,,,] 1744 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 01:57:07.090  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-04-15 01:57:07.090  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-04-15 01:57:07.090  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-04-15 01:57:07.090  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-04-15 01:57:07.090  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-04-15 01:57:07.090  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-04-15 01:57:07.090  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-04-15 01:57:07.242  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-04-15 01:57:07.258  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-04-15 01:57:07.258  INFO [bu-service,,,] 1744 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-04-15 01:57:07.258  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1649968027258 with initial instances count: 1
+2022-04-15 01:57:07.258  INFO [bu-service,,,] 1744 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BU-SERVICE with eureka with status UP
+2022-04-15 01:57:07.273  INFO [bu-service,,,] 1744 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1649968027273, current=UP, previous=STARTING]
+2022-04-15 01:57:07.273  INFO [bu-service,,,] 1744 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087: registering service...
+2022-04-15 01:57:07.328  INFO [bu-service,,,] 1744 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087 - registration status: 204
+2022-04-15 01:57:07.335  INFO [bu-service,,,] 1744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8087 (http) with context path ''
+2022-04-15 01:57:07.335  INFO [bu-service,,,] 1744 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2022-04-15 01:57:07.537  INFO [bu-service,,,] 1744 --- [main] c.b.b.BusinessUnitServicesApplication    : Started BusinessUnitServicesApplication in 13.569 seconds (JVM running for 13.945)
+2022-04-15 01:58:19.883  INFO [bu-service,,,] 1744 --- [http-nio-8087-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-15 01:58:19.883  INFO [bu-service,,,] 1744 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-15 01:58:19.908  INFO [bu-service,,,] 1744 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2022-04-15 01:58:19.968  INFO [bu-service,2718248048b29975,2718248048b29975,true] 1744 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:58:19.969  INFO [bu-service,2718248048b29975,2718248048b29975,true] 1744 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 01:58:50.050  INFO [bu-service,cf7fc4eb6e19bf4d,6566886facb2750c,true] 1744 --- [http-nio-8087-exec-4] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 01:58:50.050  INFO [bu-service,cf7fc4eb6e19bf4d,6566886facb2750c,true] 1744 --- [http-nio-8087-exec-4] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 02:02:07.114  INFO [bu-service,,,] 1744 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 02:07:07.124  INFO [bu-service,,,] 1744 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 02:12:07.129  INFO [bu-service,,,] 1744 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 02:17:07.143  INFO [bu-service,,,] 1744 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 02:22:07.145  INFO [bu-service,,,] 1744 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 02:28:33.237  WARN [bu-service,,,] 1744 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m31s198ms372µs700ns).
+2022-04-15 02:32:08.336  INFO [bu-service,,,] 1744 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 02:37:08.345  INFO [bu-service,,,] 1744 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 12:43:13.236  INFO [bu-service,,,] 10432 --- [main] c.b.b.BusinessUnitServicesApplication    : The following profiles are active: dev
+2022-04-15 12:43:14.223  INFO [bu-service,,,] 10432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-15 12:43:14.389  INFO [bu-service,,,] 10432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 154ms. Found 1 JPA repository interfaces.
+2022-04-15 12:43:14.563  WARN [bu-service,,,] 10432 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-04-15 12:43:14.962  INFO [bu-service,,,] 10432 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ec421235-dcee-3b94-a4eb-89764cf0089f
+2022-04-15 12:43:16.138  INFO [bu-service,,,] 10432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2022-04-15 12:43:16.149  INFO [bu-service,,,] 10432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-15 12:43:16.150  INFO [bu-service,,,] 10432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2022-04-15 12:43:16.327  INFO [bu-service,,,] 10432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-15 12:43:16.327  INFO [bu-service,,,] 10432 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3074 ms
+2022-04-15 12:43:16.537  WARN [bu-service,,,] 10432 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 12:43:16.537  INFO [bu-service,,,] 10432 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 12:43:16.564  INFO [bu-service,,,] 10432 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4b9c411
+2022-04-15 12:43:16.670  INFO [bu-service,,,] 10432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-15 12:43:17.036  INFO [bu-service,,,] 10432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-15 12:43:17.079  INFO [bu-service,,,] 10432 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../h2db/buserviceDB'
+2022-04-15 12:43:18.567  WARN [bu-service,,,] 10432 --- [main] o.s.c.s.zipkin2.ZipkinAutoConfiguration  : Check result of the [org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@d3cce46] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": connect timed out; nested exception is java.net.SocketTimeoutException: connect timed out}]
+2022-04-15 12:43:19.019  INFO [bu-service,,,] 10432 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-15 12:43:19.184  INFO [bu-service,,,] 10432 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-04-15 12:43:19.459  INFO [bu-service,,,] 10432 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-04-15 12:43:19.647  INFO [bu-service,,,] 10432 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-15 12:43:20.449  INFO [bu-service,,,] 10432 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-15 12:43:20.457  INFO [bu-service,,,] 10432 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-15 12:43:20.910  WARN [bu-service,,,] 10432 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-04-15 12:43:20.911  INFO [bu-service,,,] 10432 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-04-15 12:43:21.040  WARN [bu-service,,,] 10432 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-15 12:43:21.321  INFO [bu-service,,,] 10432 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-15 12:43:23.120  WARN [bu-service,,,] 10432 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-04-15 12:43:24.212  INFO [bu-service,,,] 10432 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-04-15 12:43:24.314  INFO [bu-service,,,] 10432 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-04-15 12:43:24.455  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-04-15 12:43:24.840  INFO [bu-service,,,] 10432 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-04-15 12:43:24.840  INFO [bu-service,,,] 10432 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-04-15 12:43:25.044  INFO [bu-service,,,] 10432 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-04-15 12:43:25.044  INFO [bu-service,,,] 10432 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-04-15 12:43:25.288  INFO [bu-service,,,] 10432 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 12:43:25.440  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-04-15 12:43:25.440  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-04-15 12:43:25.441  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-04-15 12:43:25.441  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-04-15 12:43:25.441  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-04-15 12:43:25.441  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-04-15 12:43:25.441  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-04-15 12:43:25.636  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-04-15 12:43:25.639  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-04-15 12:43:25.642  INFO [bu-service,,,] 10432 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-04-15 12:43:25.647  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1650006805645 with initial instances count: 1
+2022-04-15 12:43:25.661  INFO [bu-service,,,] 10432 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BU-SERVICE with eureka with status UP
+2022-04-15 12:43:25.662  INFO [bu-service,,,] 10432 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1650006805662, current=UP, previous=STARTING]
+2022-04-15 12:43:25.669  INFO [bu-service,,,] 10432 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087: registering service...
+2022-04-15 12:43:25.738  INFO [bu-service,,,] 10432 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BU-SERVICE/DESKTOP-3HDQMUK:bu-service:8087 - registration status: 204
+2022-04-15 12:43:25.759  INFO [bu-service,,,] 10432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8087 (http) with context path ''
+2022-04-15 12:43:25.761  INFO [bu-service,,,] 10432 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2022-04-15 12:43:26.005  INFO [bu-service,,,] 10432 --- [main] c.b.b.BusinessUnitServicesApplication    : Started BusinessUnitServicesApplication in 17.885 seconds (JVM running for 18.385)
+2022-04-15 12:48:25.449  INFO [bu-service,,,] 10432 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 12:52:08.343  INFO [bu-service,,,] 10432 --- [http-nio-8087-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-15 12:52:08.346  INFO [bu-service,,,] 10432 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-15 12:52:08.759  INFO [bu-service,,,] 10432 --- [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 412 ms
+2022-04-15 12:52:09.302  INFO [bu-service,9771b9967b304239,0cb3a654ba364890,true] 10432 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside getAllBusinessUnits() method
+2022-04-15 12:52:09.304  INFO [bu-service,9771b9967b304239,0cb3a654ba364890,true] 10432 --- [http-nio-8087-exec-1] c.b.b.controller.BusinessUnitController  : Inside BusinessUnitController getAllBusinessUnits() method
+2022-04-15 12:53:25.465  INFO [bu-service,,,] 10432 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 12:58:25.478  INFO [bu-service,,,] 10432 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 13:03:25.482  INFO [bu-service,,,] 10432 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 13:08:25.492  INFO [bu-service,,,] 10432 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 13:13:25.497  INFO [bu-service,,,] 10432 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 13:18:25.508  INFO [bu-service,,,] 10432 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 13:23:25.514  INFO [bu-service,,,] 10432 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-04-15 13:28:25.521  INFO [bu-service,,,] 10432 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
